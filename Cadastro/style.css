@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+:root{
+    --button-linear:linear-gradient(120deg, #E75590, #00C2CB,#E75590);
+
+}
+*{
+    box-sizing: border-box; 
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif; 
+}
+
+body{
+    background: linear-gradient(120deg, #E75590, #00C2CB);
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    background-color:#fafafa;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    width: 400px;
+    max-width: 100%;
+    overflow: hidden;
+}
+.header {
+    background-color: rgb(224, 222, 222);
+    padding: 20px;
+    border-radius: 10px;
+}
+.form{
+    padding:20px;
+    
+
+}
+
+.form-cadastro{
+    margin-bottom: 10px;
+    padding-bottom: 20px;
+    position: relative;
+}
+
+.form-cadastro label{
+    display:inline-block;
+    margin-bottom: 5px;
+}
+.form-cadastro input{
+    border: 2px solid rgb(173, 172, 172);
+    display:block;
+    border-radius: 10px;
+    font-size: 14px;
+    width: 100%;
+    padding: 10px;
+}
+
+.form-cadastro i{
+    position:absolute;
+    top:45px;
+    right: 10px;
+    visibility: hidden;
+}
+.form-cadastro small{
+    position:absolute;
+    bottom: 0;
+    left: 0;
+    visibility:hidden;
+}
+.form button{
+    height:48px;
+    width: 100%;
+    outline: none;
+    background: var(--button-linear);
+    background-size: 200%;
+    margin-bottom: 32px;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: bold;
+    border:unset;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: .5s ease-in-out;
+}
+.form button:hover{
+    background-position: right;
+}
+
+
+    /*Erro ou Sucesso*/
+
+.form-cadastro.sucesso input{
+    border-color: #2ecc71;
+}
+
+.form-cadastro.erro input{
+    border-color: #e74c3c;
+}
+.form-cadastro.sucesso i.fa-check-circle{
+    color: #2ecc71;
+    visibility: visible;
+}
+
+.form-cadastro.erro i.fa-exclamation-circle{
+    color: #e74c3c;
+    visibility: visible;
+}
+.form-cadastro.erro small{
+    color: #e74c3c;
+    visibility:visible;
+}
